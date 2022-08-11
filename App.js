@@ -1,34 +1,33 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import CustomText from './components/CustomText'
-import CustomText2 from './components/CustomText2'
+import CustomText from './components/CustomText/CustomText'
 
 export default function App() {
 
-  const CustomText1StylesRed = {
-    colorText:{
-      color:'red'
-    }
-  }
-  const CustomText1StylesRedGreen = {
-    colorText:{
-      color:'green'
-    }
-  }
+  const isVertical = true;
 
+  const stylesTest = styles1(isVertical)
+  
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
-      <CustomText text={'Red'} componentStyles={CustomText1StylesRed}/>
-      <CustomText text={'Green'} componentStyles={CustomText1StylesRedGreen}/>
-      <CustomText text={'Normal Blue!!'} />
-      <CustomText2 componentStyles={CustomText1StylesRed}/>
-      <CustomText2 componentStyles={CustomText1StylesRedGreen}/>
-      <CustomText2/>
+      <CustomText text={'Red'} componentStyles={stylesTest}/>
+      <CustomText text={'Red'}/>
       <StatusBar style="auto" />
     </View>
   );
 }
+
+const styles1 = (isVertical) => StyleSheet.create({
+  colorText1:{
+    color: isVertical ? 'green' : 'violet',
+    fontSize: 30
+  },
+  colorText2:{
+    color: 'green',
+    fontSize: 20
+  }
+})
 
 const styles = StyleSheet.create({
   container: {
