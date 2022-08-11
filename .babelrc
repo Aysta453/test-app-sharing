@@ -1,0 +1,13 @@
+//.babelrc
+{
+  "presets": [
+    [
+    {
+      "modules": false
+    }
+ ],
+    "react-native",
+    "stage-0"
+  ],
+  "extends": "./babel.config.js"
+}

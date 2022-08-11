@@ -1,1 +1,1 @@
-export { default as CustomText} from './CustomText';
+export {default as TodaysDate} from './TodaysDate/TodaysDate'
