@@ -8,8 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "build": "babel src -d build",
-    "prepare": "yarn run build"
+    "build": "babel src -d build"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
