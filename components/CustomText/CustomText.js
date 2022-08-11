@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native';
-
+import CombineStyles from '../../functions/CombineStyles'
 
 const CustomText = ({componentStyles}) => {
     const innerStyles = CustomTextStyles()
@@ -32,12 +32,3 @@ const CustomTextStyles = () =>StyleSheet.create({
 
 export default CustomText
 
-const CombineStyles = (innerStyles, outerStyles = { }) =>{
-    let styles = { }
-
-    Object.keys(innerStyles).forEach(objectName => {
-        styles[objectName] = StyleSheet.compose(innerStyles[objectName], outerStyles[objectName]) 
-    });
-
-    return styles
- }
